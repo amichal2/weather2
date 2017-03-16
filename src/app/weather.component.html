@@ -1,0 +1,8 @@
+<form #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm)" >
+choose city:
+	<input id="surname" name="surname" ngModel/> 
+	<select id="city" name="city" ngModel>
+		<option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+	</select>
+	<button type="submit">Submit</button>
+</form>
