@@ -41,4 +41,9 @@ export class WeatherComponent implements OnInit {
                         () => console.log('finished!'));
         this.formSubmitted = true;
     }
+
+    clearForm(form: NgForm) {
+        this.formSubmitted = false;
+        form.resetForm();
+    }
 }
