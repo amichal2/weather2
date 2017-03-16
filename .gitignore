@@ -165,3 +165,8 @@ hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,eclipse,intellij,windows,linux
 /target/
+
+
+*.js
+*js.map
+node_modules
