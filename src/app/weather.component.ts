@@ -3,6 +3,7 @@ import { NgForm }                 from '@angular/forms';
 
 import { City }                   from './city';
 import { CityService }            from './city.service';
+import { WeatherObject }          from './weather';
 import { WeatherService }         from './weather.service';
 
 @Component({
@@ -16,7 +17,10 @@ import { WeatherService }         from './weather.service';
 export class WeatherComponent implements OnInit {
 
     cities: City[];
-    
+    weatherObject: WeatherObject;
+    errorMessage: string;
+    formSubmitted: boolean = false;
+
     constructor(
       private cityService: CityService,
       private weatherService: WeatherService) {}
@@ -31,5 +35,10 @@ export class WeatherComponent implements OnInit {
 
     onSubmit(form: NgForm): void {
         console.log('submitted form, values: ' + form.value.surname + ' ' + form.value.city);
+        this.weatherService.getWeather().subscribe(
+                        response => this.weatherObject = response,
+                        error => this.errorMessage = <any>error,
+                        () => console.log('finished!'));
+        this.formSubmitted = true;
     }
 }

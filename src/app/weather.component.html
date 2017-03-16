@@ -1,8 +1,46 @@
-<form #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm)" >
-choose city:
-	<input id="surname" name="surname" ngModel/> 
-	<select id="city" name="city" ngModel>
-		<option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
-	</select>
-	<button type="submit">Submit</button>
-</form>
+<div [hidden]="formSubmitted">
+	<form #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm)" >
+	choose city:
+		<input id="surname" name="surname" ngModel/> 
+		<select id="city" name="city" ngModel>
+			<option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+		</select>
+		<button type="submit">Submit</button>
+	</form>
+</div>
+
+<div [hidden]="!formSubmitted">
+<table>
+      <tr>
+        <th>date</th>
+        <th>tbc</th>
+      </tr>
+      <tr>
+        <th>city name</th>
+        <th>{{weatherObject?.name}}</th>
+      </tr>
+      <tr>
+        <th>description</th>
+        <th>{{weatherObject?.weather[0]?.description}}</th>
+      </tr>
+      <tr>
+        <th>temp far</th>
+        <th>{{weatherObject?.main?.temp}}</th>
+      </tr>
+      <tr>
+        <th>temp cel</th>
+        <th>{{weatherObject?.main?.temp}}</th>
+      </tr>
+      <tr>
+        <th>sunrise</th>
+        <th>{{weatherObject?.sys?.sunrise}}</th>
+      </tr>
+      <tr>
+        <th>sunset</th>
+        <th>{{weatherObject?.sys?.sunset}}</th>
+      </tr>
+    </table>
+    <div>
+    <button (click)="formSubmitted=false">new search</button>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 {
-  "name": "weather2",
+  "name": "weather",
   "version": "0.0.1",
-  "description": "Weather2 package.json from the documentation, supplemented with testing support",
+  "description": "Weather package.json",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",
