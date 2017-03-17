@@ -35,7 +35,7 @@ export class WeatherComponent implements OnInit {
 
     onSubmit(form: NgForm): void {
         console.log('submitted form, values: ' + form.value.surname + ' ' + form.value.city);
-        this.weatherService.getWeather().subscribe(
+        this.weatherService.getWeather(form.value.city).subscribe(
                         response => this.weatherObject = response,
                         error => this.errorMessage = <any>error,
                         () => console.log('finished!'));

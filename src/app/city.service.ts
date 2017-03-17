@@ -7,8 +7,8 @@ export class CityService {
 
     getCities(): City[] {
         return [
-          {id: 11, name: 'London5'},
-          {id: 12, name: 'Hong Kong6'}
+          {id: 2643743, name: 'London'},
+          {id: 1819729, name: 'Hong Kong'}
         ]
     }
 }

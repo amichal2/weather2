@@ -12,7 +12,7 @@ class Main {
 }
 
 export class WeatherObject {
-    main: Main:
+    main: Main;
     sys: Sys;
     weather: Weather[];
     name: string;
