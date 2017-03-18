@@ -16,4 +16,5 @@ export class WeatherObject {
     sys: Sys;
     weather: Weather[];
     name: string;
+    dt: number;
 }

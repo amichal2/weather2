@@ -13,7 +13,7 @@
 <table>
       <tr>
         <th>date</th>
-        <th>tbc</th>
+        <th>{{weatherObject?.dt * 1000 | date:'yyyy/MM/dd'}}</th>
       </tr>
       <tr>
         <th>city name</th>
@@ -24,20 +24,20 @@
         <th>{{weatherObject?.weather[0]?.description}}</th>
       </tr>
       <tr>
-        <th>temp far</th>
-        <th>{{weatherObject?.main?.temp}}</th>
+        <th>temp Fahrenheit</th>
+        <th>{{weatherObject?.main?.temp | temperature:'fah'}}</th>
       </tr>
       <tr>
-        <th>temp cel</th>
-        <th>{{weatherObject?.main?.temp}}</th>
+        <th>temp Celsius</th>
+        <th>{{weatherObject?.main?.temp | temperature:'cel'}}</th>
       </tr>
       <tr>
         <th>sunrise</th>
-        <th>{{weatherObject?.sys?.sunrise}}</th>
+        <th>{{weatherObject?.sys?.sunrise * 1000 | date:'h:mma' | lowercase}}</th>
       </tr>
       <tr>
         <th>sunset</th>
-        <th>{{weatherObject?.sys?.sunset}}</th>
+        <th>{{weatherObject?.sys?.sunset * 1000 | date:'h:mma' | lowercase}}</th>
       </tr>
     </table>
     <div>

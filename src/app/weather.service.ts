@@ -18,8 +18,8 @@ export class WeatherService {
         params.set('id', cityId);
 
         return this.http
-               .get('http://api.openweathermap.org/data/2.5/weather', {search: params})
-               //.get('app/weather-data.json')
+               //.get('http://api.openweathermap.org/data/2.5/weather', {search: params})
+               .get('app/weather-data.json')
                .map(response => response.json() as WeatherObject)
                .catch(this.handleError);
     }

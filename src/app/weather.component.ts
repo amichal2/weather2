@@ -9,6 +9,7 @@ import { WeatherService }         from './weather.service';
 @Component({
   moduleId: module.id,
   templateUrl: './weather.component.html',
+  styleUrls: [ './weather.component.css' ],
   providers: [
     CityService,
     WeatherService    
@@ -37,8 +38,7 @@ export class WeatherComponent implements OnInit {
         console.log('submitted form, values: ' + form.value.surname + ' ' + form.value.city);
         this.weatherService.getWeather(form.value.city).subscribe(
                         response => this.weatherObject = response,
-                        error => this.errorMessage = <any>error,
-                        () => console.log('finished!'));
+                        error => this.errorMessage = <any>error);
         this.formSubmitted = true;
     }
 

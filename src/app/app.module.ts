@@ -8,6 +8,8 @@ import { AppRoutingModule }  from './app-routing.module';
 import { AppComponent }      from './app.component';
 import { WeatherComponent }  from './weather.component';
 
+import { TemperaturePipe }   from './temperature.pipe';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -17,7 +19,8 @@ import { WeatherComponent }  from './weather.component';
   ],
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    TemperaturePipe
   ],
   bootstrap:    [ AppComponent ]
 })
