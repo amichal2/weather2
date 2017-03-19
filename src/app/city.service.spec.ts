@@ -6,8 +6,8 @@ describe('CityService tests', () => {
     const cityService: CityService = new CityService();
 
     it('number of cities', () =>
-        expect(<City[]>(cityService.getCities()).length).toBe(2));
-    
+        expect(cityService.getCities().length).toBe(2));
+
     it('London city', () =>
         expect(cityService.getCities()[0].name).toBe('London'));
 });

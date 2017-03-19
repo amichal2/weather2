@@ -11,6 +11,6 @@ export class TemperaturePipe implements PipeTransform {
         } else {
             console.error('Unknown temperature unit: ' + unit);
         }
-        return Math.round(result * 10) / 10
+        return Math.round(result * 10) / 10;
     }
 }
