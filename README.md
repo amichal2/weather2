@@ -3,7 +3,7 @@
 ### Overview
 * Structure
 
-Angular 2 application
+Angular application
 
 * Build and run
 
