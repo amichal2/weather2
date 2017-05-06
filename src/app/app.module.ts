@@ -10,6 +10,7 @@ import { WeatherComponent }  from './weather.component';
 
 import { TemperaturePipe }   from './temperature.pipe';
 
+
 @NgModule({
   imports: [
     BrowserModule,
