@@ -1,6 +1,6 @@
 <div [hidden]="formSubmitted">
 	<form #cityForm="ngForm" (ngSubmit)="onSubmit(cityForm)" >
-        <span>choose city:</span>
+        <span>Choose City:</span>
 		<select id="city" name="city" ngModel>
 			<option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
 		</select>

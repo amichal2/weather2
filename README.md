@@ -4,9 +4,9 @@
 ### Overview
 * Structure
 
-Angular application
+Angular 4 application
 
-* Build and run
+* Build and run application
 
 build: npm install
 
