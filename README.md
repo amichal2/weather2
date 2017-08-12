@@ -4,7 +4,7 @@
 ### Overview
 * Structure
 
-Angular in v2 application
+Angular app
 
 * Build and run application
 
