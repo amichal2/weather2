@@ -179,3 +179,4 @@ hs_err_pid*
 *.js
 *js.map
 node_modules
+/weather2.iml
