@@ -4,7 +4,7 @@
 ### Overview
 * Structure
 
-Sample Angular application
+Angular 2 app
 
 * Build and run application
 
